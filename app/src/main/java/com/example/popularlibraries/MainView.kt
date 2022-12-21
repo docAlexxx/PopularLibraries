@@ -1,7 +1,15 @@
 package com.example.popularlibraries
 
 interface MainView {
-    fun setText(counter:String, pos:Int){
+    fun setTextOne(counter: String) {
+
+    }
+
+    fun setTextTwo(counter: String) {
+
+    }
+
+    fun setTextThree(counter: String) {
 
     }
 }
