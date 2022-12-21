@@ -1,7 +1,7 @@
 package com.example.popularlibraries
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.popularlibraries.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), MainView {
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     private fun initPresenter() {
-        presenter= CounterPresenter(this)
+        presenter = CounterPresenter(this)
     }
 
     override fun setTextOne(counter: String) {
