@@ -6,6 +6,7 @@ import com.example.popularlibraries.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), MainView {
 
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var presenter: CounterPresenter
 
