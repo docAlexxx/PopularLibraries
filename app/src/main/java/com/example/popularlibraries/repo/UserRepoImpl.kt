@@ -1,6 +1,9 @@
-package com.example.popularlibraries
+package com.example.popularlibraries.repo
 
-class UserRepoImpl:UserRepo {
+import com.example.popularlibraries.model.User
+import com.example.popularlibraries.repo.UserRepo
+
+class UserRepoImpl: UserRepo {
 
     private val repositories = listOf(
         User("First User"),

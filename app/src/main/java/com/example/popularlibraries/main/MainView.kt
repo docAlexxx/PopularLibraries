@@ -1,4 +1,4 @@
-package com.example.popularlibraries
+package com.example.popularlibraries.main
 
 import moxy.MvpView
 import moxy.viewstate.strategy.AddToEndSingleStrategy

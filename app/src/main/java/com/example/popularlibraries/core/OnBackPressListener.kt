@@ -1,4 +1,4 @@
-package com.example.popularlibraries
+package com.example.popularlibraries.core
 
 interface OnBackPressListener {
     fun onBackPressed(): Boolean

@@ -1,4 +1,4 @@
-package com.example.popularlibraries
+package com.example.popularlibraries.repo
 
 class CounterRepo {
     private val counter = mutableListOf(0, 0, 0)

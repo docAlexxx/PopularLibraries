@@ -1,4 +1,4 @@
-package com.example.popularlibraries
+package com.example.popularlibraries.user
 
 import com.example.popularlibraries.databinding.FragmentUserListBinding
 
@@ -7,6 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.popularlibraries.CourseApp
+import com.example.popularlibraries.UserAdapter
+import com.example.popularlibraries.core.OnBackPressListener
+import com.example.popularlibraries.model.User
+import com.example.popularlibraries.repo.UserRepoImpl
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
 

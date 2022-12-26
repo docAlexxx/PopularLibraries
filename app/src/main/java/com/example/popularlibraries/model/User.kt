@@ -1,4 +1,4 @@
-package com.example.popularlibraries
+package com.example.popularlibraries.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

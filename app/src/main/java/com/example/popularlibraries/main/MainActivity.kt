@@ -1,7 +1,9 @@
-package com.example.popularlibraries
+package com.example.popularlibraries.main
 
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.popularlibraries.CourseApp
+import com.example.popularlibraries.R
+import com.example.popularlibraries.core.OnBackPressListener
 import com.example.popularlibraries.databinding.ActivityMainBinding
 import com.github.terrakok.cicerone.androidx.AppNavigator
 import moxy.MvpAppCompatActivity
