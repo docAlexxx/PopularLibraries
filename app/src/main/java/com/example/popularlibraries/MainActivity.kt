@@ -1,7 +1,6 @@
 package com.example.popularlibraries
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.example.popularlibraries.databinding.ActivityMainBinding
 import moxy.MvpAppCompatActivity
 import moxy.ktx.moxyPresenter
@@ -10,7 +9,7 @@ class MainActivity : MvpAppCompatActivity(), MainView {
 
 
     private lateinit var binding: ActivityMainBinding
-    private val presenter by moxyPresenter { CounterPresenter(CounterModel()) }
+    private val presenter by moxyPresenter { CounterPresenter(CounterRepo()) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
