@@ -7,15 +7,5 @@ import moxy.viewstate.strategy.StateStrategyType
 
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface MainView : MvpView{
-    fun setTextOne(counter: String) {
-
-    }
-
-    fun setTextTwo(counter: String) {
-
-    }
-
-    fun setTextThree(counter: String) {
-
-    }
+    fun initList(list: List<User>)
 }

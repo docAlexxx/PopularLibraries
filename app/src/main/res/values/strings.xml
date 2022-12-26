@@ -6,4 +6,5 @@
     <string name="button_two_text">2nd Button</string>
     <string name="tv_three_text">Text Three</string>
     <string name="button_three_text">3rd Button</string>
+    <string name="user_name_text">User Name</string>
 </resources>

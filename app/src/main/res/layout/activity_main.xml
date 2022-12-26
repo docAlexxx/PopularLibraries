@@ -7,41 +7,10 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/text_one_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_one_text" />
-
-    <Button
-        android:id="@+id/button_one_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_one_text" />
-
-    <TextView
-        android:id="@+id/text_two_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_two_text" />
-
-    <Button
-        android:id="@+id/button_two_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_two_text" />
-
-    <TextView
-        android:id="@+id/text_three_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_three_text" />
-
-    <Button
-        android:id="@+id/button_three_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_three_text" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/user_rv"/>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

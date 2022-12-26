@@ -1,6 +1,7 @@
 package com.example.popularlibraries
 
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.popularlibraries.databinding.ActivityMainBinding
 import moxy.MvpAppCompatActivity
 import moxy.ktx.moxyPresenter
@@ -9,7 +10,8 @@ class MainActivity : MvpAppCompatActivity(), MainView {
 
 
     private lateinit var binding: ActivityMainBinding
-    private val presenter by moxyPresenter { CounterPresenter(CounterRepo()) }
+    private val adapter =UserAdapter()
+    private val presenter by moxyPresenter { CounterPresenter(UserRepoImpl()) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,29 +20,14 @@ class MainActivity : MvpAppCompatActivity(), MainView {
         setContentView(binding.root)
 
         with(binding) {
-            buttonOneBtn.setOnClickListener {
-                presenter.onButtonOneClick()
-            }
-            buttonTwoBtn.setOnClickListener {
-                presenter.onButtonTwoClick()
-            }
-            buttonThreeBtn.setOnClickListener {
-                presenter.onButtonThreeClick()
-            }
+            userRv.layoutManager= LinearLayoutManager(this@MainActivity)
+            userRv.adapter=adapter
         }
 
     }
 
-    override fun setTextOne(counter: String) {
-        binding.textOneTv.text = counter
-    }
-
-    override fun setTextTwo(counter: String) {
-        binding.textTwoTv.text = counter
-    }
-
-    override fun setTextThree(counter: String) {
-        binding.textThreeTv.text = counter
+    override fun initList(list: List<User>) {
+        adapter.users=list
     }
 
 }
