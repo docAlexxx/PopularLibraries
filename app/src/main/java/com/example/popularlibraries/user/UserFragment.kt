@@ -53,8 +53,6 @@ class UserFragment : MvpAppCompatFragment(), UserView, OnBackPressListener {
             override fun onItemClick(position: Int) {
                 val bundle = Bundle()
                 bundle.putString("login", adapter.users[position].login)
-                val fragment = UserItemFragment()
-                fragment.arguments = bundle
                 UserItemScreen.bundle = bundle
                 presenter.onItemClick()
             }
