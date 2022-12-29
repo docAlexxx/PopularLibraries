@@ -1,6 +1,6 @@
-package com.example.popularlibraries
+package com.example.popularlibraries.repo
 
-class CounterModel {
+class CounterRepo {
     private val counter = mutableListOf(0, 0, 0)
 
     fun getItem(pos: Int): Int {
