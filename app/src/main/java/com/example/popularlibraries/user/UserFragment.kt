@@ -1,7 +1,5 @@
 package com.example.popularlibraries.user
 
-import com.example.popularlibraries.databinding.FragmentUserListBinding
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,18 +8,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.popularlibraries.CourseApp
 import com.example.popularlibraries.UserAdapter
 import com.example.popularlibraries.core.OnBackPressListener
+import com.example.popularlibraries.core.UserItemScreen
+import com.example.popularlibraries.databinding.FragmentUserListBinding
 import com.example.popularlibraries.model.User
 import com.example.popularlibraries.repo.UserRepoImpl
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
 
-class UserFragment: MvpAppCompatFragment(), UserView, OnBackPressListener {
+class UserFragment : MvpAppCompatFragment(), UserView, OnBackPressListener {
 
     private lateinit var viewBinding: FragmentUserListBinding
     private val adapter = UserAdapter()
     private val presenter: UserPresenter by moxyPresenter {
         UserPresenter(UserRepoImpl(), CourseApp.instance.router)
     }
+
     companion object {
         fun getInstance(): UserFragment {
             return UserFragment()
@@ -48,9 +49,19 @@ class UserFragment: MvpAppCompatFragment(), UserView, OnBackPressListener {
 
     override fun initList(list: List<User>) {
         adapter.users = list
+        adapter.setOnItemClickListener(object : UserAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                val bundle = Bundle()
+                bundle.putString("login", adapter.users[position].login)
+                val fragment = UserItemFragment()
+                fragment.arguments = bundle
+                UserItemScreen.bundle = bundle
+                presenter.onItemClick()
+            }
+
+        })
     }
 
     override fun onBackPressed() = presenter.onBackPressed()
-
 
 }
